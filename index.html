@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>威盾英雄－環境保衛戰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #0f172a; /* slate-900 */
+        touch-action: none; /* Prevent scrolling/zooming on mobile */
+        user-select: none;
+        -webkit-user-select: none;
+        overscroll-behavior: none;
+        overflow: hidden; /* Lock scroll completely */
+      }
+      #root {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+      canvas {
+        image-rendering: pixelated; /* Retro feel */
+      }
+      /* Disable long-press context menus on mobile buttons */
+      .no-select {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      
+      /* Animation Keyframes */
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out forwards;
+      }
+    </style>
+
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
